@@ -8,14 +8,14 @@ public class Main {
 		int m = sc.nextInt();
 		String[] a = new String[n];
 		
-		for(int i = 0; i < n; i++) {
+		int i;
+		for(i = 0; i < n; i++) {
 			a[i] = sc.next();
 		}
 		
-		int i, j;
 		for(i = 0; i < m; i++) {
 			int count = 0;
-			for(j = 0; j < n; j++) {
+			for(int j = 0; j < n; j++) {
 				if(a[j].charAt(i) == 'X') {
 					count++;
 				}
