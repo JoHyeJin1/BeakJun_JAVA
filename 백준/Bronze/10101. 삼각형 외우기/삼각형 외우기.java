@@ -9,10 +9,10 @@ public class Main {
 		int c = sc.nextInt();
 		int total = 0;
 		
-		if(a == b && b == c) {
-			System.out.println("Equilateral");
-		}else if(a + b + c == 180) {
-			if(a == b || a == c || b == c) {
+		if(a + b + c == 180 ) {
+			if(a == b && b == c) {
+				System.out.println("Equilateral");
+			}else if(a == b || b == c || a == c) {
 				System.out.println("Isosceles");
 			}else {
 				System.out.println("Scalene");
