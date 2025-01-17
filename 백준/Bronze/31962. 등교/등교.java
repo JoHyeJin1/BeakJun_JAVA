@@ -6,32 +6,19 @@ public class Main {
 		
 		int n = sc.nextInt();
 		int x = sc.nextInt();
-		int []total = new int[n];
-		int []s = new int[n];
+		
+		int maxStart = -1;
 		
 		for(int i = 0; i < n; i++) {
-			total[i] = 0;
-			s[i] = sc.nextInt();
+			int s = sc.nextInt();
 			int t = sc.nextInt();
-			if(s[i] + t <= x) {
-				total[i] = s[i] + t;
+			int total = s + t;
+			if(total <= x && maxStart < s) {
+				maxStart = s;
 			}
 		}
 		
-		int max = total[0];
-		int maxIndex = 0;
-		for(int i = 0; i < n; i++) {
-			if(max < total[i]) {
-				max = total[i];
-				maxIndex = i;
-			}
-		}
-		
-		if(max == 0) {
-			System.out.println("-1");
-		}else {
-			System.out.println(s[maxIndex]);
-		}
+		System.out.println(maxStart);
 		sc.close();
 	}
 }
